@@ -1,0 +1,27 @@
+﻿@page "/"
+@using Compras_Totales.Data
+
+<h1>Busca tu producto</h1>
+
+<p>A través de multiples páginas encuentra el mejor precio</p>
+
+<EditForm   Model="@search" OnValidSubmit="@FindProducts">
+    <DataAnnotationsValidator/>
+    <ValidationSummary/>
+
+    <InputText id="searchName" @bind-Value="search.searchName"></InputText>
+    <br />
+    @*<button type="submit">Buscar</button>*@
+</EditForm>
+
+<button class="btn btn-primary" @onclick="FindProducts">Buscar</button>
+
+@code   
+{
+    private SearchModel search = new SearchModel();
+    private void FindProducts()
+    {
+        MLSearch mlSearch = new MLSearch() { };
+        var mlData = mlSearch.SearchRequest(search);
+    }
+}
