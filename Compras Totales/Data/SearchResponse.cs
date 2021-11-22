@@ -6,5 +6,6 @@
         public decimal Price { get; set; }
         public string? Vendor { get; set; }
         public string ThumbnailPath { get; set; }
+        public string Url { get; set; }
     }
 }

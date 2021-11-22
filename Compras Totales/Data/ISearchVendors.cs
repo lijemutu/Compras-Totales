@@ -8,6 +8,6 @@ namespace Compras_Totales.Data
     public interface ISearchVendors
     {
         string vendorName { get; set; }
-        List<SearchResponse> SearchRequest(SearchModel searchName);
+        Task<List<SearchResponse>> SearchRequestAsync(SearchModel searchName);
     }
 }

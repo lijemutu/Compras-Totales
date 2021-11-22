@@ -5,4 +5,8 @@
     <RootNamespace>Compras_Totales</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="TestData\" />
+  </ItemGroup>
+
 </Project>
