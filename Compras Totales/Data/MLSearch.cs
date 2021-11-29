@@ -49,7 +49,7 @@ namespace Compras_Totales.Data
             {
                 using (var request = new HttpRequestMessage(new HttpMethod("GET"), $"https://api.mercadolibre.com/sites/MLM/search?q={searchName.searchName}"))
                 {
-                    request.Headers.TryAddWithoutValidation("Authorization", "Bearer APP_USR-1227389838044175-112216-da8e845d53ee1ec55f864ddc1c00caeb-34996611");
+                    request.Headers.TryAddWithoutValidation("Authorization", "Bearer APP_USR-1227389838044175-112902-bb09b78a6ff54b5991d6b7e3372cb176-34996611");
                     try
                     {
                         var response = await httpClient.SendAsync(request).ConfigureAwait(false);
